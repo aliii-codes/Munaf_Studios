@@ -1,4 +1,3 @@
-```markdown
 # Munaf Studios
 
 **A Streamlit-based tool for generating and enhancing product images with advanced AI features.**
@@ -26,7 +25,7 @@ Munaf Studios provides a user-friendly interface to create professional product 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Munaf_Studios.git
+   git clone https://github.com/aliii-codes/Munaf_Studios.git
    cd Munaf_Studios
    ```
 
