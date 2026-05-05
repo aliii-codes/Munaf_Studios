@@ -1,73 +1,120 @@
-# Munaf Studios
+# Munaf Studios 🖼️  
+**The AI-powered product image studio in your browser**  
 
-**A Streamlit-based tool for generating and enhancing product images with advanced AI features.**
+[![GitHub stars](https://img.shields.io/github/stars/aliii-codes/Munaf_Studios?style=for-the-badge)](https://github.com/aliii-codes/Munaf_Studios/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/aliii-codes/Munaf_Studios?style=for-the-badge)](https://github.com/aliii-codes/Munaf_Studios/network)
+[![GitHub issues](https://img.shields.io/github/issues/aliii-codes/Munaf_Studios?style=for-the-badge)](https://github.com/aliii-codes/Munaf_Studios/issues)
+[![License](https://img.shields.io/github/license/aliii-codes/Munaf_Studios?style=for-the-badge)](LICENSE)  
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.20.0%2B-red?style=for-the-badge&logo=streamlit)](https://streamlit.io/)
+[![Pillow](https://img.shields.io/badge/Pillow-9.0.0%2B-green?style=for-the-badge&logo=python)](https://python-pillow.org/)
 
-Munaf Studios provides a user-friendly interface to create professional product images, including packshots, lifestyle shots, and enhanced visuals with shadows and generative fills.
+---
 
-## Features
+## 🚀 What's New in v2.0
+- **Generative Fill**: Draw masks and generate content in specific areas ✨
+- **Erase Elements**: Remove unwanted objects with AI inpainting 🧹
+- **Enhanced Prompting**: AI-powered prompt enhancement for better results 💡
+- **Improved Error Handling**: More robust API integrations and retries ⚙️
 
-- **Image Generation**: Generate high-quality product images from text or uploaded images.
-- **Packshot Creation**: Create professional packshots with customizable backgrounds.
-- **Shadow Addition**: Add natural or drop shadows to product images.
-- **Lifestyle Shots**: Generate lifestyle context for products based on user descriptions.
-- **Image Enhancement**: Enhance prompts and apply generative fills.
-- **Image Preview & Download**: Preview generated images and download them directly.
+---
 
-## Tech Stack
+| **Feature**               | **Description**                                                                 |
+|---------------------------|---------------------------------------------------------------------------------|
+| **AI Image Generation**   | Create stunning product images from text prompts or uploaded photos 🖼️          |
+| **Packshot Creator**      | Generate professional packshots with customizable backgrounds 📦                |
+| **Shadow Studio**         | Add natural or drop shadows with adjustable intensity and blur 🌞               |
+| **Lifestyle Generator**   | Place products in AI-generated lifestyle scenes 🏡                             |
+| **Prompt Enhancer**       | Automatically refine text prompts for better image generation 💡                |
+| **Generative Fill**       | Fill masked areas with AI-generated content ✨                                  |
+| **Image Eraser**          | Remove unwanted elements from images with AI inpainting 🧹                      |
 
-- **Python**
-- **Streamlit**
-- **Pillow (PIL)**
-- **Requests**
-- **Python-Magic**
+---
 
-## Installation
+## 🛠️ Tech Stack
+| Category       | Technologies                                                                 |
+|----------------|------------------------------------------------------------------------------|
+| **Framework**  | Streamlit, Gradio (demo)                                                    |
+| **AI Services**| Bria AI API (Image Generation, Enhancement, Editing)                        |
+| **Image Processing** | Pillow (PIL), NumPy, OpenCV (via Streamlit Canvas)                          |
+| **Utilities**  | Python-Magic (file validation), Dotenv (env management)                    |
 
+---
+
+## 🏗️ Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/aliii-codes/Munaf_Studios.git
    cd Munaf_Studios
    ```
 
-2. Install dependencies:
+2. Create a virtual environment and install dependencies:
    ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
-3. Run the Streamlit app:
-   ```bash
-   streamlit run app.py
+3. Set up environment variables:
+   Create a `.env` file with:
+   ```
+   BRIA_API_KEY=your_bria_api_key_here
    ```
 
-## Usage
+---
 
-1. **Upload an Image**: Use the file uploader to upload a product image (optional).
-2. **Configure Settings**: Adjust settings in the sidebar for packshots, shadows, lifestyle shots, and more.
-3. **Generate Images**: Click the generate button to create images based on your configuration.
-4. **Preview & Download**: Preview the generated images and download them using the provided buttons.
+## 🚀 Usage
+1. **Run the App**:
+   ```bash
+   streamlit run Munaf.Studios/main.py
+   ```
 
-## Project Structure
+2. **Access the Demo**:
+   ```bash
+   python Munaf.Studios/demo.py
+   ```
 
+---
+
+## 📂 Project Structure
 ```
 Munaf_Studios/
-├── Components/
+├── Components/                  # Reusable UI components
 │   ├── image_preview.py
 │   ├── sidebar.py
 │   └── uploader.py
-├── Services/
+├── Services/                   # API service integrations
 │   ├── __init__.py
-│   ├── lifestyle_shot.py
-│   ├── shadow.py
-│   ├── packshot.py
-│   ├── prompt_enhancement.py
+│   ├── erase_foreground.py
 │   ├── generative_fill.py
 │   ├── hd_image_generation.py
-│   └── erase_foreground.py
-├── app.py
+│   ├── lifestyle_shot.py
+│   ├── packshot.py
+│   ├── prompt_enhancement.py
+│   └── shadow.py
+├── Workflows/                  # Multi-step workflows
+│   └── generate_ad_set.py
+├── Munaf.Studios/              # Main application
+│   ├── demo.py                 # Gradio demo
+│   └── main.py                 # Streamlit app
 └── requirements.txt
 ```
 
-## License
+---
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-```
+## 🤝 Contributing
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -m "Add new feature"`
+4. Push to branch: `git push origin feature/new-feature`
+5. Open a pull request
+
+---
+
+## 🐞 Bug Reports & Feature Requests
+[Open an issue](https://github.com/aliii-codes/Munaf_Studios/issues/new/choose)
+
+---
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.  
+Built with ❤️ using Streamlit and Bria AI. Special thanks to the open-source community for the amazing tools that made this possible.
